@@ -1,0 +1,41 @@
+
+<div ng-include="'tpl/include/header.html'"></div>
+
+<div class="container">
+  <!-- 指定面包屑-->
+  <ul class="breadcrumb">
+    <li>
+      <a href="#/start">首页</a>
+    </li>
+    <li>详情</li>
+  </ul>
+
+  <!-- 具体详情-->
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+       <h3>{{dish.name}}</h3>
+      <img ng-src="img/{{dish.img_lg}}"
+           class="img-responsive
+      " alt=""/>
+
+      <p>{{dish.material}}</p>
+      <p>{{dish.detail}}</p>
+      <p>{{dish.price | currency:'￥'}}</p>
+
+    </div>
+
+    <div class="panel-footer">
+      <div class="text-right">
+        <button ng-click="jump('/order/'+dish.did)" class="btn btn-success">我要下单</button>
+        <button ng-click="jump('/main')" class="btn btn-primary">我再看看</button>
+      </div>
+    </div>
+
+  </div>
+<br>
+        <br>
+        <br>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>
